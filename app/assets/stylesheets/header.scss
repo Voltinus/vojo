@@ -1,0 +1,11 @@
+.main-header {
+  position: fixed;
+  background: lime;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+
+  &-spacer {
+    height: 50px;
+  }
+}
