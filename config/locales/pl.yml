@@ -1,0 +1,7 @@
+pl:
+  header:
+    lang: "Język"
+  users:
+    actions: "Akcje"
+    email: "Email"
+    profile: "Profil"

@@ -5,12 +5,16 @@
   %meta{ name: "viewport", content: "width=device-width,initial-scale=1" }
   = csrf_meta_tags
   = csp_meta_tag
+
+  %link{ rel: "preconnect", href: "https://fonts.googleapis.com" }
+  %link{ rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: true }
+  %link{ href: "https://fonts.googleapis.com/css2?family=Ubuntu&display=swap", rel: "stylesheet" }
+
   = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
   = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
 
 %body
-  %p.notice= notice
-  %p.alert= alert
-  = render partial: 'shared/header'
-  = yield
+  = render partial: 'shared/header', locals: { alert: alert, notice: notice }
+  .main-container
+    = yield
   = render partial: 'shared/footer'

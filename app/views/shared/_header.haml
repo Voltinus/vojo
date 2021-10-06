@@ -1,3 +1,24 @@
 %header.main-header
-  HEADER
+  .main-header__container
+    = link_to :root, class: 'main-header__logo' do
+      = image_tag 'logo.png', height: 40 
+
+    .main-header__alert-notice-container
+      .main-header__alert
+        = alert
+      .main-header__notice
+        = notice
+
+    .main-header__links
+      - if current_user.nil?
+        = link_to "Login", "/users/sign_in"
+      - else
+        = link_to current_user.email, users_path(current_user.id, locale: I18n.locale)
+      .main-header__dropdown
+        .main-header__dropdown-button
+          = t "header.lang"
+        .main-header__dropdown-content
+          = link_to "Polski", { locale: "pl" }
+          = link_to "English", { locale: "en" }
+          = link_to "Esperanto", { locale: "eo" }
 .main-header-spacer

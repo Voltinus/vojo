@@ -1,0 +1,16 @@
+%h2
+  users index
+
+%table
+  %thead
+    %tr
+      %th ID
+      %th= t "users.email"
+      %th= t "users.actions"
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td= user.id
+        %td= user.email
+        %td
+          = link_to t("users.profile"), "/" + I18n.locale.to_s + "/users/" + user.id.to_s

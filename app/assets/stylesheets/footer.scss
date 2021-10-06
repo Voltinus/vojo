@@ -1,5 +1,7 @@
+@import 'variables';
+
 .main-footer {
-  background: cyan;
+  background: $color-dark-main;
   height: 50px;
   width: 100%;
   text-align: center;

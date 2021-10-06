@@ -1,4 +1,7 @@
+@import 'variables';
+
 body {
-  background: $color-black;
-  color: $color-light-gray;
+  background: $color-background;
+  color: $color-light-main;
+  font-family: 'Ubuntu', sans-serif !important;
 }

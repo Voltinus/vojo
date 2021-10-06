@@ -3,5 +3,11 @@
 Rails.application.routes.draw do
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  root "website#index"
+
+  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+    root 'website#index'
+
+    get '/users', to: 'users#index'
+    get '/users/:id', to: 'users#show'
+  end
 end
