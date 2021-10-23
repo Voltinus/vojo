@@ -1,7 +1,24 @@
 pl:
   header:
     lang: "Język"
+    account: "Konto"
+    login: "Zaloguj się"
+    forum: "Forum"
   users:
     actions: "Akcje"
     email: "Email"
     profile: "Profil"
+  forum:
+    category: "Kategoria"
+    topics_number: "Wątki"
+    last_topic: "Ostatni wątek"
+    topic: "Wątek"
+    author: "Autor"
+    last_post: "Ostatni post"
+    subcategory: "Podkategoria"
+    categories:
+      interesting_places: "Ciekawe miejsca"
+    subcategories:
+      poland: "Polska"
+      spain: "Hiszpania"
+      germany: "Niemcy"

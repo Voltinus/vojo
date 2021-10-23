@@ -32,7 +32,24 @@
 en:
   header:
     lang: "Language"
+    account: "Account"
+    login: "Login"
+    forum: "Forum"
   users:
     actions: "Actions"
     email: "Email"
     profile: "Profile"
+  forum:
+    category: "Category"
+    topics_number: "Topics"
+    last_topic: "Last topic"
+    topic: "Topic"
+    author: "Author"
+    last_post: "Last post"
+    subcategory: "Subcategory"
+    categories:
+      interesting_places: "Interesting places"
+    subcategories:
+      poland: "Poland"
+      spain: "Spain"
+      germany: "Germany"

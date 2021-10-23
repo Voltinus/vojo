@@ -10,10 +10,11 @@
         = notice
 
     .main-header__links
+      = link_to t("header.forum"), "/forum"
       - if current_user.nil?
-        = link_to "Login", "/users/sign_in"
+        = link_to t("header.login"), "/users/sign_in"
       - else
-        = link_to current_user.email, users_path(current_user.id, locale: I18n.locale)
+        = link_to t("header.account"), users_path(current_user.id, locale: I18n.locale)
       .main-header__dropdown
         .main-header__dropdown-button
           = t "header.lang"

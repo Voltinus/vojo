@@ -1,0 +1,18 @@
+%h1
+  = link_to t("header.forum"), forum_path
+  = " /  " + t("forum.categories." + @this_category.name)
+
+%hr
+
+
+%table.forum__table
+  %tr
+    %th= t("forum.subcategory")
+    %th= t("forum.topics_number")
+    %th= t("forum.last_topic")
+  - @subcategories.each do |subcategory|
+    %tr
+      %td= link_to t("forum.subcategories." + subcategory.name), forum_subcategory_path(locale, @this_category, subcategory)
+      %td= subcategory.topics_count
+      %td
+        = subcategory.last_topic.nil? ? '-' : link_to(subcategory.last_topic.name, forum_topic_path(locale, subcategory.category, subcategory, subcategory.last_topic))

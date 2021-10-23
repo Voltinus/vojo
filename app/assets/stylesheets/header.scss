@@ -47,6 +47,10 @@
 
   &__links {
     float: right;
+
+    & a {
+      margin-right: 20px;
+    }
   }
 
   &__dropdown-button {

@@ -1,0 +1,23 @@
+@import 'variables';
+
+.forum {
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    & td, & th {
+      border: 1px solid #333;
+      padding: 8px;
+    }
+    
+    & tr:nth-child(even){background-color: #222;}
+    
+    & th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: $color-dark-accent;
+      color: white;
+    }
+  }
+}

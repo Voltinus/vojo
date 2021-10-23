@@ -1,0 +1,15 @@
+%h1
+  = t "header.forum"
+
+%hr
+
+%table.forum__table
+  %tr
+    %th= t("forum.category")
+    %th= t("forum.topics_number")
+    %th= t("forum.last_topic")
+  - @categories.each do |category|
+    %tr
+      %td= link_to t("forum.categories." + category.name), forum_category_path(locale, category)
+      %td= category.topics_count
+      %td= link_to category.last_topic.name, forum_topic_path(locale, category, category.last_topic.subcategory, category.last_topic)

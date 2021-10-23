@@ -1,7 +1,24 @@
 eo:
   header:
     lang: "Lingvo"
+    account: "Konto"
+    login: "Ensaluti"
+    forum: "Forumo"
   users:
     actions: "Agoj"
     email: "Retpoŝtadreso"
     profile: "Profilo"
+  forum:
+    category: "Kategorio"
+    topics_number: "Fadenoj"
+    last_topic: "Lasta fadeno"
+    topic: "Fadeno"
+    author: "Autoro"
+    last_post: "Lasta afiŝo"
+    subcategory: "Subkategorio"
+    categories:
+      interesting_places: "Interesaj lokoj"
+    subcategories:
+      poland: "Pollando"
+      spain: "Hispanio"
+      germany: "Germanio"

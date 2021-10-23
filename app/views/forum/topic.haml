@@ -1,0 +1,15 @@
+%h1.forum__navigation
+  = link_to t("header.forum"), forum_path
+  = " / "
+  = link_to t("forum.categories." + @this_category.name), forum_category_path(locale, @this_category)
+  = " / "
+  = link_to t("forum.subcategories." + @this_subcategory.name), forum_subcategory_path(locale, @this_category, @this_subcategory)
+  = " / " + @this_topic.name
+
+
+- @posts.each do |post|
+  %hr
+  %h2{ style: "margin-bottom: 5px;" }= link_to post.author.nickname, path_for_user_profile(post.author)
+  %h6{ style: "margin-top: 5px;" }= post.created_at
+  %p= post.content
+  %br

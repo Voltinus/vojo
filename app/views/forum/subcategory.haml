@@ -1,0 +1,20 @@
+%h1
+  = link_to t("header.forum"), forum_path
+  = " / "
+  = link_to t("forum.categories." + @this_category.name), forum_category_path(locale, @this_category)
+  = " / " + t("forum.subcategories." + @this_subcategory.name)
+
+%hr
+
+%table.forum__table
+  %tr
+    %th= t("forum.topic")
+    %th= t("forum.author")
+    %th= t("forum.last_post")
+  - @topics.each do |topic|
+    %tr
+      %td= link_to t("forum.categories." + topic.name), forum_topic_path(locale, @this_category.id, @this_subcategory.id, topic)
+      %td= link_to topic.author.nickname, path_for_user_profile(topic.author)
+      %td
+        = link_to topic.last_post.author.nickname, users_path(locale, topic.last_post.author)
+        = ", " + topic.last_post.created_at.to_s
