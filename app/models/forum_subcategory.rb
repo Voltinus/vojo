@@ -5,11 +5,11 @@ class ForumSubcategory < ApplicationRecord
     ForumCategory.find(forum_category_id)
   end
 
-  def topics_count
-    ForumTopic.where(forum_subcategory_id: id).count
+  def topics_count(locale)
+    ForumTopic.where(forum_subcategory_id: id, language: locale).count
   end
 
-  def last_topic
-    ForumTopic.where(forum_subcategory_id: id).order(created_at: :desc).first
+  def last_topic(locale)
+    ForumTopic.where(forum_subcategory_id: id, language: locale).order(created_at: :desc).first
   end
 end

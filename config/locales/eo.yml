@@ -2,6 +2,7 @@ eo:
   header:
     lang: "Lingvo"
     account: "Konto"
+    users: "Uzantoj"
     login: "Ensaluti"
     forum: "Forumo"
   users:

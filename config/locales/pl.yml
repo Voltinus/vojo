@@ -2,6 +2,7 @@ pl:
   header:
     lang: "Język"
     account: "Konto"
+    users: "Użytkownicy"
     login: "Zaloguj się"
     forum: "Forum"
   users:

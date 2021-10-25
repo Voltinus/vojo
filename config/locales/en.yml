@@ -33,6 +33,7 @@ en:
   header:
     lang: "Language"
     account: "Account"
+    users: "Users"
     login: "Login"
     forum: "Forum"
   users:

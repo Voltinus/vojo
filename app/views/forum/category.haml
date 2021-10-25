@@ -13,6 +13,6 @@
   - @subcategories.each do |subcategory|
     %tr
       %td= link_to t("forum.subcategories." + subcategory.name), forum_subcategory_path(locale, @this_category, subcategory)
-      %td= subcategory.topics_count
+      %td= subcategory.topics_count(locale)
       %td
-        = subcategory.last_topic.nil? ? '-' : link_to(subcategory.last_topic.name, forum_topic_path(locale, subcategory.category, subcategory, subcategory.last_topic))
+        = subcategory.last_topic(locale).nil? ? '-' : link_to(subcategory.last_topic(locale).name, forum_topic_path(locale, subcategory.category, subcategory, subcategory.last_topic(locale)))

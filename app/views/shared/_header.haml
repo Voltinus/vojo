@@ -14,7 +14,8 @@
       - if current_user.nil?
         = link_to t("header.login"), "/users/sign_in"
       - else
-        = link_to t("header.account"), users_path(current_user.id, locale: I18n.locale)
+        = link_to t("header.account"), path_for_user_profile(current_user)
+      = link_to t("header.users"), users_path()
       .main-header__dropdown
         .main-header__dropdown-button
           = t "header.lang"
