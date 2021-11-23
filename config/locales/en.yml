@@ -36,6 +36,7 @@ en:
     users: "Users"
     login: "Login"
     forum: "Forum"
+    articles: "Articles"
   users:
     actions: "Actions"
     email: "Email"
@@ -47,6 +48,7 @@ en:
     topic: "Topic"
     author: "Author"
     last_post: "Last post"
+    new_post: "New post"
     subcategory: "Subcategory"
     categories:
       interesting_places: "Interesting places"

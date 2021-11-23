@@ -5,6 +5,7 @@ pl:
     users: "Użytkownicy"
     login: "Zaloguj się"
     forum: "Forum"
+    articles: "Artykuły"
   users:
     actions: "Akcje"
     email: "Email"
@@ -16,6 +17,7 @@ pl:
     topic: "Wątek"
     author: "Autor"
     last_post: "Ostatni post"
+    new_post: "Nowy post"
     subcategory: "Podkategoria"
     categories:
       interesting_places: "Ciekawe miejsca"

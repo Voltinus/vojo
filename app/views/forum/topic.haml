@@ -13,3 +13,10 @@
   %h6{ style: "margin-top: 5px;" }= post.created_at
   %p= post.content
   %br
+
+%hr
+%h1= t('forum.new_post')
+= form_with do |form|
+  = form.text_area :content, class: 'forum__textarea'
+  %br
+  = form.submit class: 'forum__post-submit'

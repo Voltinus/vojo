@@ -3,6 +3,6 @@
 %ul
   - @articles.each do |article|
     %li
-      = link_to article.title, article
+      = link_to article.title, "articles/" + article.id.to_s
 
-= link_to "New Article", new_article_path
+-# = link_to "New Article", new_article_path

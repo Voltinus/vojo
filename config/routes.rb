@@ -14,5 +14,8 @@ Rails.application.routes.draw do
     match '/forum/:category_id', to: 'forum#category', as: :forum_category, via: [ :get, :post ]
     match '/forum/:category_id/:subcategory_id', to: 'forum#subcategory', as: :forum_subcategory, via: [ :get, :post ]
     match '/forum/:category_id/:subcategory_id/:topic_id', to: 'forum#topic', as: :forum_topic, via: [ :get, :post ]
+
+    get '/articles', to: 'articles#index'
+    get '/articles/:article_id', to: 'articles#article'
   end
 end

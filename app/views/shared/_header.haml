@@ -1,7 +1,7 @@
 %header.main-header
   .main-header__container
     = link_to :root, class: 'main-header__logo' do
-      = image_tag 'logo.png', height: 40 
+      = image_tag 'logo.png', height: 40
 
     .main-header__alert-notice-container
       .main-header__alert
@@ -10,6 +10,7 @@
         = notice
 
     .main-header__links
+      = link_to t("header.articles"), "/articles"
       = link_to t("header.forum"), "/forum"
       - if current_user.nil?
         = link_to t("header.login"), "/users/sign_in"

@@ -5,6 +5,7 @@ eo:
     users: "Uzantoj"
     login: "Ensaluti"
     forum: "Forumo"
+    articles: "Artikoloj"
   users:
     actions: "Agoj"
     email: "Retpoŝtadreso"
@@ -16,6 +17,7 @@ eo:
     topic: "Fadeno"
     author: "Autoro"
     last_post: "Lasta afiŝo"
+    new_post: "Nova afiŝo"
     subcategory: "Subkategorio"
     categories:
       interesting_places: "Interesaj lokoj"
