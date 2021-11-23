@@ -10,13 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_23_173553) do
+ActiveRecord::Schema.define(version: 2021_11_01_234713) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "body"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id", null: false
+    t.integer "language"
+    t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
   create_table "forum_categories", force: :cascade do |t|
@@ -67,6 +70,7 @@ ActiveRecord::Schema.define(version: 2021_10_23_173553) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "articles", "users"
   add_foreign_key "forum_posts", "forum_topics"
   add_foreign_key "forum_posts", "users"
   add_foreign_key "forum_subcategories", "forum_categories"
