@@ -1,0 +1,37 @@
+@import 'variables';
+
+.messages {
+  &__box {
+    width: 70%;
+    padding: 20px;
+    background: $color-dark-main;
+    padding-top: 20px;
+
+    &--left {
+      @extend .messages__box;
+    }
+
+    &--right {
+      @extend .messages__box;
+    }
+  }
+
+  &__box-container {
+    margin: 40px;
+
+    &--left {
+      @extend .messages__box-container;
+    }
+
+    &--right {
+      @extend .messages__box-container;
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__author-container {
+    color: #777;
+    margin-bottom: 20px;
+  }
+}

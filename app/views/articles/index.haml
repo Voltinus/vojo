@@ -1,8 +1,22 @@
-%h1 Articles#index
+%h1= t('articles.articles')
 
-%ul
-  - @articles.each do |article|
-    %li
-      = link_to article.title, "articles/" + article.id.to_s
+%hr
 
--# = link_to "New Article", new_article_path
+%table.forum__table
+  %tr
+    %th= t("articles.title")
+    %th= t("articles.author")
+    %th= t("articles.created_at")
+  - if @articles.length != 0
+    - @articles.each do |article|
+      %tr
+        %td= link_to article.title, "articles/" + article.id.to_s
+        %td= article.author.nickname
+        %td= article.created_at
+  - else
+    %tr
+      %td{ colspan: 3 }
+        = t 'articles.no_articles'
+
+%hr
+= link_to t('articles.new'), new_article_path

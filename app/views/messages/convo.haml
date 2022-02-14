@@ -1,0 +1,28 @@
+%h1
+  = t("messages.convo_with") + @convo_partner.nickname
+
+- @messages.each do |msg|
+  - if msg.to_user == current_user
+    .messages__box-container--left
+      .messages__box--left
+        .messages__author-container
+          = msg.from_user.nickname + ","
+          = time_ago_in_words(msg.created_at)
+          = t "messages.ago"
+        = msg.content
+  - else
+    .messages__box-container--right
+      .messages__box--right
+        .messages__author-container
+          = msg.from_user.nickname + ","
+          = time_ago_in_words(msg.created_at)
+          = t "messages.ago"
+        = msg.content
+
+= form_with method: :post do |f|
+  = f.text_area :content, class: 'forum__textarea'
+  %br
+  = f.submit class: 'forum__post-submit'
+
+:javascript
+  document.getElementById('content').scrollIntoView();

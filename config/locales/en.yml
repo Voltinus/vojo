@@ -37,10 +37,17 @@ en:
     login: "Login"
     forum: "Forum"
     articles: "Articles"
+    messages: "Messages"
+  home:
+    newest_articles: "Newest articles"
+    newest_topics: "Newest topics"
+    visit: "Visit"
   users:
     actions: "Actions"
     email: "Email"
     profile: "Profile"
+    user_details: "User details"
+    username: "Username"
   forum:
     category: "Category"
     topics_number: "Topics"
@@ -50,9 +57,35 @@ en:
     last_post: "Last post"
     new_post: "New post"
     subcategory: "Subcategory"
+    no_topics: "No topics"
     categories:
       interesting_places: "Interesting places"
+      travel_companions: "Travel companions"
     subcategories:
       poland: "Poland"
       spain: "Spain"
       germany: "Germany"
+  articles:
+    articles: "Articles"
+    list: "List of articles"
+    created: "Created at"
+    author: "Author"
+    new: "New article"
+    delete: "Delete"
+    no_articles: "No articles"
+  alert:
+    post_empty: "Post can't be empty!"
+    message_empty: "Message can't be empty!"
+    nickname_taken: "Nickname taken!"
+    nickname_changed: "Nickname changed!"
+    email_changed: "Email changed!"
+  messages:
+    recent_conversations: "Recent conversations:"
+    convo_with: "Conversation with: "
+    ago: "ago"
+  form:
+    title: "Title"
+    body: "Body"
+    language: "Language"
+    create: "Create"
+    article: "article"

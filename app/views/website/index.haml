@@ -1,1 +1,19 @@
-123
+%h1= t 'home.newest_articles'
+- if @articles.empty?
+  = t 'articles.no_articles'
+- else
+  - @articles.each do |article|
+    = article.title
+    = link_to t('home.visit'), "#{I18n.locale}/articles/#{article.id}"
+    %br
+
+%hr
+
+%h1= t 'home.newest_topics'
+- if @articles.empty?
+  = t 'forum.no_topics'
+- else
+  - @topics.each do |topic|
+    = topic.name
+    = link_to t('home.visit'), "#{I18n.locale}/forum/#{topic.category.id}/#{topic.forum_subcategory_id}/#{topic.id}"
+    %br

@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.all
+    @articles = Article.where(language: I18n.locale.to_s)
   end
 
   def show
@@ -13,9 +13,11 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
+    @article.user_id = current_user.id
+    #@article.language = params[:language]
 
     if @article.save
-      redirect_to @article
+      redirect_to action: 'show', id: @article.id
     else
       render :new
     end
@@ -23,6 +25,6 @@ class ArticlesController < ApplicationController
 
   private
     def article_params
-      params.require(:article).permit(:title, :body)
+      params.require(:article).permit(:title, :body, :language)
     end
 end

@@ -1,3 +1,26 @@
-= @user.id
-%br
-= @user.email
+= form_with method: :get do |f|
+  %table.forum__table
+    %tr
+      %th{ colspan: "2" }
+        = t 'users.user_details'
+    %tr
+      %td ID
+      %td= @user.id
+    %tr
+      %td= t 'users.username'
+      %td
+        - if current_user.id == @user.id
+          = f.text_field :nickname, value: @user.nickname, style: "width: 100%"
+        - else
+          = @user.nickname
+    %tr
+      %td= t 'users.email'
+      %td
+        - if current_user.id == @user.id
+          = f.email_field :email, value: @user.email, style: "width: 100%"
+        - else
+          = @user.email
+    - if current_user.id == @user.id
+      %tr
+        %td{ colspan: "2" }
+          = f.submit style: "display: block; margin: auto", class: "btn btn-dark"

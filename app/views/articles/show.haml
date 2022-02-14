@@ -1,5 +1,15 @@
 %h1
   = @article.title
-%p
+
+%p{ style: 'color: gray; margin-top: -30px;' }
+  = t('articles.created') + ': ' + @article.created_at.to_s
+%p{ style: 'color: gray; margin-top: -30px;' }
+  = (t('articles.author') + ': ' + link_to(@article.author.nickname, path_for_user_profile(@article.author))).html_safe
+- if @article.author.id == current_user.id
+  %a{ style: 'color: red; margin-top: -30px;', id: 'article__delete', href: 'javascript:0;' }
+    = t('articles.delete')
+
+%p{ style: 'margin-bottom: 50px' }
   = @article.body
-= link_to "List of articles", articles_path
+
+= link_to t('articles.list'), articles_path

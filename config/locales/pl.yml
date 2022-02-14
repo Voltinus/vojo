@@ -6,10 +6,17 @@ pl:
     login: "Zaloguj się"
     forum: "Forum"
     articles: "Artykuły"
+    messages: "Wiadomości"
+  home:
+    newest_articles: "Najnowsze artykuły"
+    newest_topics: "Najnowsze wątki"
+    visit: "Odwiedź"
   users:
     actions: "Akcje"
     email: "Email"
     profile: "Profil"
+    user_details: "Dane użytkownika"
+    username: "Nazwa użytkownika"
   forum:
     category: "Kategoria"
     topics_number: "Wątki"
@@ -19,9 +26,35 @@ pl:
     last_post: "Ostatni post"
     new_post: "Nowy post"
     subcategory: "Podkategoria"
+    no_topics: "Brak wątków"
     categories:
       interesting_places: "Ciekawe miejsca"
+      travel_companions: "Towarzysze podróży"
     subcategories:
       poland: "Polska"
       spain: "Hiszpania"
       germany: "Niemcy"
+  articles:
+    articles: "Artykuły"
+    list: "Lista artykułów"
+    created: "Utworzono"
+    author: "Autor"
+    new: "Nowy artykuł"
+    delete: "Usuń"
+    no_articles: "Brak artykułów"
+  alert:
+    post_empty: "Post nie może być pusty"
+    message_empty: "Wiadomość nie może być pusta!"
+    nickname_taken: "Nazwa użytkownika zajęta!"
+    nickname_changed: "Nazwa użytkownika zmieniona!"
+    email_changed: "Adres mailowy zmieniony!"
+  messages:
+    recent_conversations: "Ostatnie konwersacje:"
+    convo_with: "Konwersacja z: "
+    ago: "temu"
+  form:
+    title: "Tytuł"
+    body: "Treść"
+    language: "Język"
+    create: "Utwórz"
+    article: "artykuł"

@@ -1,0 +1,16 @@
+%h1
+  = t "messages.recent_conversations"
+
+%hr
+
+%table.forum__table
+  %tr
+    %th= t("messages.username")
+    %th= t("messages.last_message")
+    %th= t("messages.time")
+  - @conversations.each do |convo_id|
+    - convo = @conversations[convo_id[0]]
+    %tr
+      %td= link_to (convo.last.from_id == current_user.id ? convo.last.to_user.nickname : convo.last.from_user.nickname), "messages/" + convo_id[0].to_s
+      %td= convo.last.content[0,50] + "..."
+      %td= convo.last.created_at

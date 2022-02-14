@@ -10,13 +10,14 @@
         = notice
 
     .main-header__links
-      = link_to t("header.articles"), "/articles"
-      = link_to t("header.forum"), "/forum"
+      = link_to t("header.articles"), articles_path
+      = link_to t("header.forum"), forum_path
+      = link_to t("header.users"), users_path()
       - if current_user.nil?
         = link_to t("header.login"), "/users/sign_in"
       - else
         = link_to t("header.account"), path_for_user_profile(current_user)
-      = link_to t("header.users"), users_path()
+        = link_to t("header.messages"), messages_path
       .main-header__dropdown
         .main-header__dropdown-button
           = t "header.lang"

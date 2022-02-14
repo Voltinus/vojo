@@ -6,10 +6,17 @@ eo:
     login: "Ensaluti"
     forum: "Forumo"
     articles: "Artikoloj"
+    messages: "Mesaĝoj"
+  home:
+    newest_articles: "Plej novaj artikoloj"
+    newest_topics: "Plej novaj fadenoj"
+    visit: "Viziti"
   users:
     actions: "Agoj"
     email: "Retpoŝtadreso"
     profile: "Profilo"
+    user_details: "Uzanto detaloj"
+    username: "Uzantnomo"
   forum:
     category: "Kategorio"
     topics_number: "Fadenoj"
@@ -19,9 +26,35 @@ eo:
     last_post: "Lasta afiŝo"
     new_post: "Nova afiŝo"
     subcategory: "Subkategorio"
+    no_topics: "Ne estas fadenoj"
     categories:
       interesting_places: "Interesaj lokoj"
+      travel_companions: "Vojaĝo akompanantoj"
     subcategories:
       poland: "Pollando"
       spain: "Hispanio"
       germany: "Germanio"
+  articles:
+    articles: "Artikoloj"
+    list: "Listo de artikoloj"
+    created: "Kreita"
+    author: "Aŭtoro"
+    new: "Nova artikolo"
+    delete: "Nuligi"
+    no_articles: "Ne estas artikoloj"
+  alert:
+    post_empty: "Afiŝo ne povas esti malplena!"
+    message_empty: "Mesaĝo ne povas esti malplena!"
+    nickname_taken: "Uzantnomo okupata!"
+    nickname_changed: "Uzantnomo ŝanĝita!"
+    email_changed: "Retpoŝtadreso ŝanĝita!"
+  messages:
+    recent_conversations: "Lastaj konversacioj:"
+    convo_with: "Konversacio kun: "
+    ago: "antaŭ"
+  form:
+    title: "Titolo"
+    body: "Enhavo"
+    language: "Lingvo"
+    create: "Kreu"
+    article: "artikolon"

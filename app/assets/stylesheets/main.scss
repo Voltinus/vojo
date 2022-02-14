@@ -5,15 +5,11 @@
   max-width: $max-page-width;
   margin: auto;
   padding: 20px 0;
-  min-height: calc(100vh - 140px);
+  min-height: calc(100vh - 100px);
 }
 
 body {
   margin: 0;
-}
-
-table {
-
 }
 
 td, th {
@@ -26,4 +22,22 @@ a {
 
 p {
   white-space: pre-line;
+}
+
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=submit],
+textarea,
+select {
+  background: $color-dark-main;
+  border: 1px solid $color-light-main;
+  padding: 4px;
+  border-radius: 4px;
+  color: #eee;
+}
+
+input[type=submit] {
+  background-color: $color-light-accent;
+  color: black;
 }

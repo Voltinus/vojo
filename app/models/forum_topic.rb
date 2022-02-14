@@ -6,6 +6,10 @@ class ForumTopic < ApplicationRecord
     ForumSubcategory.find(forum_subcategory_id)
   end
 
+  def category
+    ForumCategory.find(subcategory.forum_category_id)
+  end
+
   def author
     User.find(user_id)
   end
