@@ -4,6 +4,7 @@ pl:
     account: "Konto"
     users: "Użytkownicy"
     login: "Zaloguj się"
+    logout: "Wyloguj się"
     forum: "Forum"
     articles: "Artykuły"
     messages: "Wiadomości"
@@ -37,11 +38,13 @@ pl:
   articles:
     articles: "Artykuły"
     list: "Lista artykułów"
-    created: "Utworzono"
+    title: "Tytuł"
     author: "Autor"
+    created_at: "Utworzono"
     new: "Nowy artykuł"
     delete: "Usuń"
     no_articles: "Brak artykułów"
+    delete_message: "Jesteś pewny/a, że chcesz usunąć ten artykuł?"
   alert:
     post_empty: "Post nie może być pusty"
     message_empty: "Wiadomość nie może być pusta!"

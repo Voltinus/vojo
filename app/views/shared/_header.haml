@@ -16,8 +16,10 @@
       - if current_user.nil?
         = link_to t("header.login"), "/users/sign_in"
       - else
-        = link_to t("header.account"), path_for_user_profile(current_user)
         = link_to t("header.messages"), messages_path
+        = link_to t("header.account"), path_for_user_profile(current_user)
+        %a{ href: 'javascript:;', id: 'logout_link' }
+          = t("header.logout")
       .main-header__dropdown
         .main-header__dropdown-button
           = t "header.lang"
@@ -26,3 +28,16 @@
           = link_to "English", { locale: "en" }
           = link_to "Esperanto", { locale: "eo" }
 .main-header-spacer
+
+- content_for :javascript do
+  :javascript
+    $(document).ready(function() {
+      $("#logout_link").click(function() {
+        $.ajax({
+          method: "DELETE",
+          url: "/users/sign_out"
+        }).done(function(result) {
+          console.log(result);
+        });
+      });
+    });

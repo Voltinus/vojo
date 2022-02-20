@@ -35,6 +35,7 @@ en:
     account: "Account"
     users: "Users"
     login: "Login"
+    logout: "Log out"
     forum: "Forum"
     articles: "Articles"
     messages: "Messages"
@@ -68,11 +69,13 @@ en:
   articles:
     articles: "Articles"
     list: "List of articles"
-    created: "Created at"
+    created_at: "Created at"
+    title: "Title"
     author: "Author"
     new: "New article"
     delete: "Delete"
     no_articles: "No articles"
+    delete_message: "Are you sure you want to delete this article?"
   alert:
     post_empty: "Post can't be empty!"
     message_empty: "Message can't be empty!"
