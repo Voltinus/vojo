@@ -49,18 +49,28 @@
     float: right;
     line-height: 1;
 
-    & a {
+    & > a {
       margin-right: 20px;
+
+      &:hover {
+        color: white;
+      }
     }
   }
 
   &__dropdown-button {
     background-color: $color-dark-accent;
     color: white;
-    padding: 16px;
+    padding: 15.5px 16px;
+    height: 50px;
     font-size: 16px;
     border: none;
     cursor: pointer;
+  }
+
+  &__dropdown-button--icon {
+    @extend .main-header__dropdown-button;
+    padding: 9px;
   }
   
   &__dropdown {

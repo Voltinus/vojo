@@ -19,7 +19,5 @@ Rails.application.routes.draw do
     match '/messages/:convo_id', to: 'messages#convo', as: :convo, via: [ :get, :post ]
 
     resources :articles
-    # get '/articles', to: 'articles#index'
-    # get '/articles/:article_id', to: 'articles#show'
   end
 end
